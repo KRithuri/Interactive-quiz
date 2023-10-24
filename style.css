@@ -24,7 +24,7 @@ h1, h2, h3, h4{
 }
 h1{
     font-size: 5.4rem;
-    color: blue;
+    color: #56a5eb;
     margin-bottom: 5rem;
 }
 h1 > span{
