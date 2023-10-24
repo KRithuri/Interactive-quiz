@@ -1,11 +1,11 @@
 /*Import Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-/*
+
 body{
     
     background-image: linear-gradient(to right, #4682b4, #40e0d0, #008080);
     font-family:'Playfair Display', serif;
-}*/
+}
 
 :root{
     background-color: #acf5ff;
@@ -14,10 +14,11 @@ body{
 
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    
     margin: 0;
     padding: 0;
     color: #333;
+    
 }
 h1, h2, h3, h4{
     margin-bottom: 1rem;
