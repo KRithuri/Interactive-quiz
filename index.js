@@ -85,21 +85,38 @@ const questions = [
   
   // Function to display the current question
   function displayQuestion() {
+    // const questionElement = document.getElementById("question");
+    // const choicesContainer = document.querySelector(".choice-container");
+  
+    // questionElement.textContent = quiz.currentQuestion.question;
+    // choicesContainer.innerHTML = "";
+  
+    // quiz.currentQuestion.choices.forEach((choice, index) => {
+    //   const choiceDiv = document.createElement("div");
+    //   choiceDiv.classList.add("choice-container");
+    //   choiceDiv.innerHTML = `
+    //     <p class="choice-prefix">${String.fromCharCode(65 + index)}</p>
+    //     <p class="choice-text">${choice}</p>
+    //   `;
+    //   choiceDiv.addEventListener("click", () => handleChoiceClick(index));
+    //   choicesContainer.appendChild(choiceDiv);
+
+      
+    // });
+
     const questionElement = document.getElementById("question");
-    const choicesContainer = document.querySelector(".choice-container");
+
+    //Select all elements with the class ".choice-text" that are inside elements with the `.choice-container`
+    const choicesContainer = document.querySelectorAll(".choice-container .choice-text");
   
     questionElement.textContent = quiz.currentQuestion.question;
-    choicesContainer.innerHTML = "";
+    //choicesContainer.innerHTML = "";
   
     quiz.currentQuestion.choices.forEach((choice, index) => {
-      const choiceDiv = document.createElement("div");
-      choiceDiv.classList.add("choice-container");
-      choiceDiv.innerHTML = `
-        <p class="choice-prefix">${String.fromCharCode(65 + index)}</p>
-        <p class="choice-text">${choice}</p>
-      `;
-      choiceDiv.addEventListener("click", () => handleChoiceClick(index));
-      choicesContainer.appendChild(choiceDiv);
+      choicesContainer[index].textContent = `${String.fromCharCode(65 + index)}. ${choice}`;
+
+      choicesContainer[index].parentNode.addEventListener("click", () => handleChoiceClick(index));
+      
     });
   }
   
